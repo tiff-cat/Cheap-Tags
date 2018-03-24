@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="activities.RevisionLogViewController">
+   <children>
+       <TableView fx:id="revisionLog" prefHeight="367.0" prefWidth="600.0">
+           <columns>
+               <TableColumn fx:id="currentName" prefWidth="200.0" text="Current Name" />
+               <TableColumn fx:id="oldName" prefWidth="200.0" text="Old Name" />
+               <TableColumn fx:id="timeStamp" prefWidth="199.0" text="Time Stamp" />
+           </columns>
+       </TableView>
+       <Button fx:id="revertTo" layoutY="366.0" mnemonicParsing="false" onAction="#setRevertTo" prefHeight="34.0" prefWidth="600.0" text="Revert to" />
+   </children>
+</AnchorPane>

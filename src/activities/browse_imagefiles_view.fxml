@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="activities.BrowseImageFilesViewController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ScrollPane fitToWidth="TRUE" prefHeight="673.0" prefWidth="319.0">
+               <content>
+                  <TilePane fx:id="imageTilePane" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefColumns="3" prefWidth="300.0" />
+               </content>
+            </ScrollPane>
+            <TextField fx:id="imageSearchBar" focusTraversable="false" layoutX="5.0" layoutY="675.0" onKeyReleased="#imageSearchTextChanged" prefHeight="39.0" prefWidth="306.0" promptText="Search image name by text or regex" />
+            <ListView fx:id="imageNamesListView" onMouseClicked="#chooseImageClick" prefHeight="673.0" prefWidth="317.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="443.0">
+         <children>
+            <ListView fx:id="existingTags" layoutX="77.0" layoutY="481.0" prefHeight="193.0" prefWidth="248.0" />
+            <ListView fx:id="allTagsListView" layoutX="404.0" layoutY="483.0" onMouseClicked="#addButtonClick" prefHeight="192.0" prefWidth="272.0" />
+            <Label fx:id="Tags" alignment="CENTER" layoutX="472.0" layoutY="464.0" prefHeight="23.0" prefWidth="132.0" text="Available Tags" />
+            <Button fx:id="Delete" layoutX="213.0" layoutY="674.0" mnemonicParsing="false" onAction="#deleteButtonClick" prefHeight="27.0" prefWidth="112.0" text="Remove" />
+            <Button fx:id="rename" layoutX="76.0" layoutY="674.0" mnemonicParsing="false" onAction="#setTagsBtnClick" prefHeight="27.0" prefWidth="104.0" text="Save Tags" />
+            <Label layoutX="150.0" layoutY="467.0" text="Current Tags" />
+            <ToggleButton fx:id="toggleButton" layoutX="-36.0" layoutY="531.0" mnemonicParsing="false" onAction="#imagesViewToggle" rotate="90.0" text="View As Text" />
+            <TextField fx:id="TagSearchBar" layoutX="404.0" layoutY="673.0" onKeyReleased="#TagSearchTextChanged" prefHeight="30.0" prefWidth="271.0" promptText="Search tag by text" />
+            <HBox layoutX="-7.0" layoutY="-3.0" prefHeight="15.0" prefWidth="762.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#homeButtonClick" prefHeight="27.0" prefWidth="126.0">
+                     <graphic>
+                        <ImageView fitHeight="14.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/25694.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="myTagsButton" mnemonicParsing="false" onAction="#myTagsButtonClicked" prefHeight="27.0" prefWidth="112.0" text="My Tags" />
+                  <Button fx:id="viewParentButton" mnemonicParsing="false" onAction="#viewParentButtonClicked" prefHeight="27.0" prefWidth="139.0" text="View Parent" />
+                  <Button fx:id="revisionLogButton" mnemonicParsing="false" onAction="#revisionLogButtonClick" prefHeight="23.0" prefWidth="183.0" text="View Revision Log" />
+                  <Button fx:id="shareWithInstagramBtn" mnemonicParsing="false" onAction="#shareWithInstagram" prefHeight="20.0" prefWidth="174.0" text="Share With Instagram">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/instagram-logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="changedDirectory" mnemonicParsing="false" onAction="#moveImageButtonClick" prefHeight="27.0" prefWidth="162.0" text="Move Image" />
+               </children>
+            </HBox>
+            <Label fx:id="nameOfSelectedFile" alignment="CENTER" layoutX="238.0" layoutY="26.0" prefHeight="30.0" prefWidth="274.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="7.0" layoutY="53.0" prefHeight="407.0" prefWidth="741.0">
+               <children>
+                  <ImageView fx:id="selectedImageView" fitHeight="405.0" fitWidth="735.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

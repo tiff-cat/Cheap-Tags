@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="activities.TagScreenViewController">
+   <children>
+      <ListView fx:id="tagView" layoutX="56.0" layoutY="66.0" prefHeight="560.0" prefWidth="963.0" />
+      <TextField fx:id="tagInput" layoutX="63.0" layoutY="639.0" onKeyPressed="#handleEnterPressed" prefHeight="47.0" prefWidth="525.0" promptText="Example: model.Tag" />
+      <TextField fx:id="tagSearch" layoutX="707.0" layoutY="15.0" onKeyReleased="#searchInputChanged" prefHeight="37.0" prefWidth="305.0" promptText="Search tag by text" />
+      <HBox layoutX="612.0" layoutY="639.0" prefHeight="47.0" prefWidth="411.0">
+         <children>
+            <Button fx:id="add" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="47.0" prefWidth="106.0" text="Add" />
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="47.0" prefWidth="107.0" text="Delete" />
+            <Button fx:id="lastDirectoryButton" mnemonicParsing="false" onAction="#lastDirectoryButtonClicked" prefHeight="47.0" prefWidth="126.0" text="Last Directory" />
+            <Button fx:id="home" mnemonicParsing="false" onAction="#homeButtonClicked" prefHeight="78.0" prefWidth="109.0">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/25694.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</Pane>

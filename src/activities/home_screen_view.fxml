@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="activities.HomeScreenViewController">
+   <items>
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+              <Label fx:id="previouslyViewedLabel" alignment="CENTER" layoutX="4.0" prefHeight="35.0" prefWidth="166.0" text="Previously Viewed " AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+              <ListView fx:id="previouslyViewedListView" layoutX="-13.0" layoutY="40.0" prefHeight="353.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+          </children>
+       </AnchorPane>
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="825.0">
+          <children>
+              <ImageView fx:id="backgroundImage" fitHeight="723.0" fitWidth="1256.0" layoutX="-329.0" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../resources/images/20160714-1-2.jpeg" />
+                 </image>
+              </ImageView>
+              <VBox alignment="CENTER" layoutX="9.0" layoutY="-27.0" prefHeight="739.0" prefWidth="753.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="-27.0">
+                 <children>
+                     <ImageView fx:id="logo" fitHeight="287.0" fitWidth="471.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../resources/images/Logomakr_9jxIm2.png" />
+                        </image>
+                     </ImageView>
+                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                            <VBox alignment="CENTER" prefHeight="119.0" prefWidth="210.0">
+                               <children>
+                                   <Button fx:id="openDirectoryButton" mnemonicParsing="false" onAction="#openDirectoryClick" prefHeight="44.0" prefWidth="210.0" text="Open New Directory">
+                                       <VBox.margin>
+                                           <Insets top="10.0" />
+                                       </VBox.margin>
+                                   </Button>
+                                   <Button fx:id="importFromInstagramBtn" mnemonicParsing="false" onAction="#importFromInstagram" prefHeight="39.0" prefWidth="210.0" text="Import From Instagram">
+                                       <graphic>
+                                           <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                              <image>
+                                                  <Image url="@../resources/images/instagram-logo.png" />
+                                              </image>
+                                           </ImageView>
+                                       </graphic>
+                                   </Button>
+                                   <Button fx:id="tumblrBtn" mnemonicParsing="false" onAction="#tumblrButtonClicked" prefHeight="18.0" prefWidth="210.0" text="Import From Tumblr">
+                                       <graphic>
+                                           <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                              <image>
+                                                  <Image url="@../resources/images/Tumblr_icon.png" />
+                                              </image>
+                                           </ImageView>
+                                       </graphic>
+                                   </Button>
+                               </children>
+                            </VBox>
+                        </children>
+                     </HBox>
+                     <Button fx:id="myTagsButton" mnemonicParsing="false" onAction="#openTagScreen" prefHeight="27.0" prefWidth="210.0" text="My Tags" />
+                  <Button fx:id="masterLogButton" mnemonicParsing="false" onAction="#openMasterLog" prefHeight="27.0" prefWidth="210.0" text="Master Log" />
+                 </children>
+              </VBox>
+          </children>
+       </AnchorPane>
+   </items>
+</SplitPane>
